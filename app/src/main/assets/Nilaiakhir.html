@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Nilai Akhir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        input[type="number"], button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<h1>Kalkulator Nilai Akhir</h1>
+<div class="container">
+    <input type="number" id="assignment" placeholder="Nilai Tugas" />
+    <input type="number" id="exam" placeholder="Nilai Ujian" />
+    <input type="number" id="attendance" placeholder="Nilai Kehadiran" />
+    <button id="calculate">Hitung</button>
+</div>
+
+<script>
+        document.getElementById('calculate').addEventListener('click', function() {
+            var assignment = parseFloat(document.getElementById('assignment').value);
+            var exam = parseFloat(document.getElementById('exam').value);
+            var attendance = parseFloat(document.getElementById('attendance').value);
+            var finalScore = calculateFinalScore(assignment, exam, attendance);
+            alert('Nilai Akhir: ' + finalScore);
+        });
+
+        function calculateFinalScore(assignment, exam, attendance) {
+            // Implementasikan logika perhitungan nilai akhir di sini
+            return assignment * 0.3 + exam * 0.6 + attendance * 0.1;
+        }
+    </script>
+</body>
+</html>

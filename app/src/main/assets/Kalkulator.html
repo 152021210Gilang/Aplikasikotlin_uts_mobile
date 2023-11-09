@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        input[type="number"], button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<h1>Kalkulator</h1>
+<div class="container">
+    <input type="number" id="angka1" placeholder="Angka 1" />
+    <input type="number" id="angka2" placeholder="Angka 2" />
+    <button id="tambah">+</button>
+    <button id="kurang">-</button>
+    <button id="kali">*</button>
+    <button id="bagi">/</button>
+</div>
+
+<script>
+        document.getElementById('tambah').addEventListener('click', function() {
+            var angka1 = parseFloat(document.getElementById('angka1').value);
+            var angka2 = parseFloat(document.getElementById('angka2').value);
+            var hasil = angka1 + angka2;
+            alert('Hasil: ' + hasil);
+        });
+
+        document.getElementById('kurang').addEventListener('click', function() {
+            var angka1 = parseFloat(document.getElementById('angka1').value);
+            var angka2 = parseFloat(document.getElementById('angka2').value);
+            var hasil = angka1 - angka2;
+            alert('Hasil: ' + hasil);
+        });
+
+        document.getElementById('kali').addEventListener('click', function() {
+            var angka1 = parseFloat(document.getElementById('angka1').value);
+            var angka2 = parseFloat(document.getElementById('angka2').value);
+            var hasil = angka1 * angka2;
+            alert('Hasil: ' + hasil);
+        });
+
+        document.getElementById('bagi').addEventListener('click', function() {
+            var angka1 = parseFloat(document.getElementById('angka1').value);
+            var angka2 = parseFloat(document.getElementById('angka2').value);
+            if (angka2 !== 0) {
+                var hasil = angka1 / angka2;
+                alert('Hasil: ' + hasil);
+            } else {
+                alert('Error: Pembagian dengan angka 0 tidak valid');
+            }
+        });
+    </script>
+</body>
+</html>

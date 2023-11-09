@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Luas Persegi Panjang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        input[type="number"], button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<h1>Kalkulator Luas Persegi Panjang</h1>
+<div class="container">
+    <input type="number" id="panjang" placeholder="Panjang" />
+    <input type="number" id="lebar" placeholder="Lebar" />
+    <button id="hitung">Hitung</button>
+</div>
+
+<script>
+        document.getElementById('hitung').addEventListener('click', function() {
+            var panjang = parseFloat(document.getElementById('panjang').value);
+            var lebar = parseFloat(document.getElementById('lebar').value);
+            var luas = panjang * lebar;
+            alert('Luas: ' + luas);
+        });
+    </script>
+</body>
+</html>

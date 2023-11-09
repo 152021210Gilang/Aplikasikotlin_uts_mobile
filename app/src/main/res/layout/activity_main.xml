@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_bmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kalkulator BMI" />
+
+    <Button
+        android:id="@+id/btn_nilai_akhir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kalkulator Nilai Akhir" />
+
+    <Button
+        android:id="@+id/btn_persegi_panjang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Persegi Panjang" />
+
+    <Button
+        android:id="@+id/btn_kalkulator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kalkulator" />
+
+    <Button
+        android:id="@+id/btn_daftar_kontak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar Kontak" />
+
+    <Button
+        android:id="@+id/btn_kamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kamera" />
+
+    <Button
+        android:id="@+id/btn_pemutar_musik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pemutar Musik" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

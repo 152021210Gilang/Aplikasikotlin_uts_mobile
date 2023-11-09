@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Kontak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .contact-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .contact-list li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-list li:hover {
+            background-color: #f9f9f9;
+        }
+
+        .contact-list li:active {
+            background-color: #e9e9e9;
+        }
+    </style>
+</head>
+<body>
+<h1>Daftar Kontak</h1>
+<div class="container">
+    <ul class="contact-list">
+        <li>Kontak 1</li>
+        <li>Kontak 2</li>
+        <li>Kontak 3</li>
+    </ul>
+</div>
+
+<script>
+        const contactList = document.querySelector('.contact-list');
+
+        contactList.addEventListener('click', (event) => {
+            if (event.target.nodeName === 'LI') {
+                const kontak = event.target.textContent;
+                alert(`Kontak yang dipilih: ${kontak}`);
+            }
+        });
+    </script>
+</body>
+</html>

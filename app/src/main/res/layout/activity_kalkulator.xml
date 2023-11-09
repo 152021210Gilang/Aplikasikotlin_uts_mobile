@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_kalkulator.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".KalkulatorActivity">
+
+    <EditText
+        android:id="@+id/et_angka1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Angka Pertama" />
+
+    <EditText
+        android:id="@+id/et_angka2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Angka Kedua" />
+
+    <Button
+        android:id="@+id/btn_tambah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah" />
+
+    <Button
+        android:id="@+id/btn_kurang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kurang" />
+
+    <Button
+        android:id="@+id/btn_kali"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kali" />
+
+    <Button
+        android:id="@+id/btn_bagi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bagi" />
+
+</LinearLayout>

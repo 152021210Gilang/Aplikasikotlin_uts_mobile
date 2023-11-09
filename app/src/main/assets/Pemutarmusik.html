@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pemutar Musik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .album-cover {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+        }
+
+        .song-title {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<h1>Pemutar Musik</h1>
+<div class="container">
+    <img src="album_cover.jpg" alt="Album Cover" class="album-cover" />
+    <h2 class="song-title">Judul Lagu</h2>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="stop">Stop</button>
+</div>
+
+<script>
+        var mediaPlayer = new Audio('song.mp3');
+        var isPaused = false;
+
+        document.getElementById('play').addEventListener('click', function() {
+            if (isPaused) {
+                mediaPlayer.play();
+                alert('Memutar musik');
+                isPaused = false;
+            } else {
+                mediaPlayer = new Audio('song.mp3');
+                mediaPlayer.play();
+                alert('Memutar musik');
+            }
+        });
+
+        document.getElementById('pause').addEventListener('click', function() {
+            if (!mediaPlayer.paused) {
+                mediaPlayer.pause();
+                alert('Musik dijeda');
+                isPaused = true;
+            }
+        });
+
+        document.getElementById('stop').addEventListener('click', function() {
+            mediaPlayer.pause();
+            mediaPlayer.currentTime = 0;
+            alert('Musik dihentikan');
+        });
+    </script>
+</body>
+</html>
